@@ -1,0 +1,41 @@
+Project: Customer Orders Schema and Reporting
+
+Use Case
+Build a database schema for customers, products, orders, and order_items. 
+Each table must contain a minimum of 100 records with realistic data (e.g., varying dates, cities, and categories).
+
+Table Structure
+
+- customers: customer_id, first_name, last_name, email, phone, city, created_at
+
+- products: product_id, product_name, category, price, cost, created_at
+
+- orders: order_id, customer_id, order_date, status, total_amount
+
+- order_items: order_item_id, order_id, product_id, quantity, unit_price, line_total
+
+
+Concepts & Milestones
+
+- Concepts: Table design, keys, SELECT, WHERE, JOIN, Aggregations (GROUP BY), and simple views.
+- Milestones: Create tables with constraints, load sample data, and maintain data integrity.
+
+Required Reports
+
+- Revenue by day/week.
+- Top 5 products by revenue and quantity.
+- Identification of customers with no orders.
+- Customer classification (Repeat vs. One-Time).
+- Customer lifetime value and top 5 revenue-generating customers.
+- Views for recurring reports.
+
+Stretch Goals
+
+- ERD diagram.
+- Indexes for frequently queried columns.
+
+Deliverables
+
+1. SQL scripts (schema, inserts, and queries).
+2. Report outputs in CSV format.
+3. A README file explaining your approach.

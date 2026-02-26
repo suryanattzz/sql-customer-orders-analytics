@@ -1,0 +1,117 @@
+# ================================================================
+# .gitignore for SQL - Customer Orders Schema and Reporting
+# ================================================================
+
+# ----------------------------------------------------------------
+# IDE and Editor Files
+# ----------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------------------------------
+# Database Connection Files (NEVER commit credentials!)
+# ----------------------------------------------------------------
+*.sql.config
+*connection*.json
+*credentials*.txt
+.env
+.env.local
+database.ini
+db_config.php
+config/database.yml
+
+# ----------------------------------------------------------------
+# Temporary/Backup Files
+# ----------------------------------------------------------------
+*.bak
+*.tmp
+*.temp
+*.old
+*_backup.*
+*_BACKUP.*
+
+# ----------------------------------------------------------------
+# MySQL Workbench Files
+# ----------------------------------------------------------------
+*.mwb.bak
+*.mwb.beforefix
+
+# ----------------------------------------------------------------
+# SQL Dump Files (Large backup files - use releases instead)
+# ----------------------------------------------------------------
+# Uncomment if you don't want to track large dumps:
+# *.sql.gz
+# *.sql.zip
+# *dump*.sql
+# *backup*.sql
+
+# ----------------------------------------------------------------
+# Optimized Query Files (exclude from Git)
+# ----------------------------------------------------------------
+**/*optimized*.sql
+outputs_week_02/optimized_query_*.sql
+
+# ----------------------------------------------------------------
+# CSV Export Files (Optional - keep if needed for documentation)
+# ----------------------------------------------------------------
+# Uncomment if CSV outputs are generated dynamically:
+# outputs_week_01/*.csv
+# outputs_week_02/*.csv
+
+# ----------------------------------------------------------------
+# Documentation Build Files
+# ----------------------------------------------------------------
+*.pdf
+*.docx
+# Keep the project description Word doc:
+!week2_sql_project*.docx
+
+# ----------------------------------------------------------------
+# Operating System Files
+# ----------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ----------------------------------------------------------------
+# Log Files
+# ----------------------------------------------------------------
+*.log
+logs/
+*.err
+
+# ----------------------------------------------------------------
+# Node modules (if using any JS tooling)
+# ----------------------------------------------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ----------------------------------------------------------------
+# Python (if using any Python scripts)
+# ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# ----------------------------------------------------------------
+# Keep Important Files
+# ----------------------------------------------------------------
+# Explicitly track these:
+!README.md
+!SQL_CHEAT_SHEET.md
+!SQL_QUICK_REFERENCE.sql
+!folder_structure.txt
+!project_description.txt

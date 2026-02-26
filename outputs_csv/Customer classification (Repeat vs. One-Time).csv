@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,city,order_count
+1,Aadhya,Chopra,aadhya.chopra10@example.com,Mumbai,7
+2,Diya,Joshi,diya.joshi9@example.com,Kochi,7
+3,Anaya,sam,arbi.sam8@example.com,madurai,7
+4,Kabir,nambi,kabir.nambi7@example.com,Coimbatore,7
+5,Ishaan,Gupta,ishaan.gupta6@example.com,Pune,7

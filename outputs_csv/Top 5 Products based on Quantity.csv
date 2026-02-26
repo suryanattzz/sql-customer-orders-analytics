@@ -1,0 +1,6 @@
+product_id,quantity,product_name,category,total_amount,total_revenue
+69,5,"Product 62",Apparel,168.75,67.50000000
+9,5,"Product 2",Apparel,106.25,42.50000000
+29,5,"Product 22",Beauty,231.25,92.50000000
+49,5,"Product 42",Electronics,356.25,142.50000000
+54,5,"Product 57",Sports,75.00,30.00000000

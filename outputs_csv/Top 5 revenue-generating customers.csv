@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,city,Customer_Lifetime_Value
+4,Kabir,nambi,kabir.nambi7@example.com,Coimbatore,1243.75
+3,Anaya,sam,arbi.sam8@example.com,madurai,960.00
+2,Diya,Joshi,diya.joshi9@example.com,Kochi,693.75
+1,Aadhya,Chopra,aadhya.chopra10@example.com,Mumbai,445.00
+49,Ishaan,Gupta,ishaan.gupta42@example.com,Bengaluru,356.25

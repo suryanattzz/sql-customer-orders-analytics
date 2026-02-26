@@ -1,0 +1,6 @@
+product_id,quantity,product_name,category,total_amount,total_revenue
+49,5,"Product 42",Electronics,356.25,142.50000000
+44,5,"Product 47",Grocery,325.00,130.00000000
+94,5,"Product 97",Home,325.00,130.00000000
+89,5,"Product 82",Beauty,293.75,117.50000000
+48,4,"Product 43",Home,280.00,112.00000000
