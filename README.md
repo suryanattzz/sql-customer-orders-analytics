@@ -20,7 +20,7 @@ This project demonstrates end-to-end data engineering and analytics:
 |-----------|-----------|
 | **Database Schema** | AI-Assisted Design |
 | **Sample Data** | AI-Generated (100+ Indian customers, normalized sample datasets) |
-| **Analytical Queries** | Hand-Crafted by Surya |
+| **Analytical Queries** | Hand-Crafted |
 | **Data Integration** | Manual ETL & Validation |
 | **Documentation** | Collaborative |
 
@@ -28,7 +28,7 @@ This project demonstrates end-to-end data engineering and analytics:
 
 ## 🏗️ Database Architecture
 
-### **Core Tables (5)**
+### **Core Tables (4)**
 
 | Table | Purpose | Records | Key Relationships |
 |-------|---------|---------|-------------------|
@@ -36,12 +36,12 @@ This project demonstrates end-to-end data engineering and analytics:
 | `products` | Product catalog with pricing | 100 | PK: product_id |
 | `orders` | Order transactions | 100 | FK: customer_id |
 | `order_items` | Line items per order | 100+ | FKs: order_id, product_id |
-| `returns` | Return/refund records | 100 | FKs: order_item_id, product_id |
 
-### **Extended Tables (3)**
+### **Extended Tables (4) - Week 02 Analytics**
 
 | Table | Purpose |
-|-------|---------|
+|-------|----------|
+| `returns` | Return/refund records with refund amounts | 100 | FKs: order_item_id, product_id |
 | `promotions` | Discount campaigns and coupon codes |
 | `order_promotions` | Mapping orders to promotions applied |
 | `product_inventory` | Stock levels and reorder tracking |
@@ -351,7 +351,7 @@ Open any `.sql` file in VS Code → SQLTools → Execute → Export to CSV
 
 ## 📝 Notes
 
-- Schema created with AI assistance for structure; queries hand-crafted for business insights
+- Schema created with AI assistance for structure; queries developed for business insights
 - Sample data is anonymized with Indian naming conventions
 - CSV exports are in Week 01 format; Week 02 focuses on SQL query development
 - All queries are non-optimized versions; optimization notes available in documentation
