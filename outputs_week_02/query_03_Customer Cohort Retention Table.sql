@@ -9,47 +9,6 @@
 -- Jan 2024	100%	68%	52%	39%
 -- Feb 2024	100%	72%	55%	42%
 use customer_orders;
-create or replace view cte as(
-select customer_id,
-first_order ,
-first_order as cohort_month
--- date_format(first_order,"%M-%Y") as cohort_month 
-from(
-select customer_id,
-min(order_date) as first_order
-from orders 
-group by customer_id) as t);
-
-create or replace view cte1 as(
-select 
-o.customer_id,
--- date_format(o.order_date,"%M-%Y") as order_month,
-o.order_date,
-c.cohort_month ,
-c.first_order
-from orders o 
-left join cte c 
-on o.customer_id = c.customer_id 
-order by o.customer_id,o.order_date);
-
-create or replace view cte2 as(
-select 
-customer_id,
--- date_format(o.order_date,"%M-%Y") as order_month,
-order_date,
-cohort_month ,
-first_order,
-TIMESTAMPDIFF(MONTH, first_order, order_date) as month_count
-from cte1);
-
-select 
-cohort_month,
-month_count,
-count(distinct customer_id)
-from cte2
-group by cohort_month,month_count  ;
-
-
 
 -- 1️⃣ Get each customer's first purchase month (Cohort Month)
 WITH cohort_cte AS (
@@ -63,9 +22,9 @@ WITH cohort_cte AS (
 -- 2️⃣ Get each order with its order month
 orders_cte AS (
     SELECT
-        o.customer_id,
-        DATE_FORMAT(o.order_date, '%Y-%m-01') AS order_month
-    FROM orders o
+        customer_id,
+        DATE_FORMAT(order_date, '%Y-%m-01') AS order_month
+    FROM orders 
 ),
 
 -- 3️⃣ Join and calculate month difference
@@ -79,6 +38,7 @@ retention_cte AS (
     JOIN orders_cte o
         ON c.customer_id = o.customer_id
 ),
+
 
 -- 4️⃣ Count active customers per cohort per month
 active_users AS (
@@ -118,10 +78,10 @@ SELECT
 FROM active_users a
 JOIN cohort_size cs
     ON a.cohort_month = cs.cohort_month
-
+	
 GROUP BY a.cohort_month
 ORDER BY a.cohort_month;
 
-
+use customer_orders;
 
 

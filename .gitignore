@@ -66,6 +66,7 @@ outputs_week_02/optimized_query_*.sql
 # ----------------------------------------------------------------
 # Documentation Build Files
 # ----------------------------------------------------------------
+*.txt
 *.pdf
 *.docx
 # Keep the project description Word doc:
