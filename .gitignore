@@ -69,8 +69,6 @@ outputs_week_02/optimized_query_*.sql
 *.txt
 *.pdf
 *.docx
-# Keep the project description Word doc:
-!week2_sql_project*.docx
 
 # ----------------------------------------------------------------
 # Operating System Files
@@ -114,5 +112,3 @@ venv/
 !README.md
 !SQL_CHEAT_SHEET.md
 !SQL_QUICK_REFERENCE.sql
-!folder_structure.txt
-!project_description.txt
